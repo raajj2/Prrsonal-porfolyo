@@ -1,0 +1,167 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Styling for the navigation bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3.125rem; 
+    height: 6rem;
+    width: 100%;
+    background-color: #2F4F4F;
+    color: #D3D3D3; 
+}
+
+/* Styling for your name in the navbar */
+.logo {
+    font-family: 'font1', sans-serif; /* Using your custom font */
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Styling for the list in the navigation bar */
+nav ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    z-index: 1000; /* Ensure it is above other content */
+}
+
+nav ul li {
+    margin: 0 0.9375rem; /* Adjusted from 15px to rem */
+}
+
+nav ul li a {
+    color: #D3D3D3;
+    font-size: 1.3rem; /* Adjusted from 17px to rem */
+    text-transform: uppercase;
+    padding: 0.4375rem 0.8125rem; /* Adjusted from 7px 13px to rem */
+    border-radius: 3px;
+    font-weight: bolder;
+    font-family: 'font1';
+}
+
+a.active, a:hover {
+    background-color: #3B6E6E; 
+    color: #FFFFFF;
+    transition: .5s;
+}
+
+.nav-btn {
+    background-color: #2F4F4F; 
+    color: #D3D3D3;
+    border: 2px solid #D3D3D3;
+    padding: 0.5rem 1.5rem; 
+    font-size: 1.5rem; 
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-btn a {
+    color: inherit;
+    text-decoration: none; 
+}
+
+.nav-btn:hover {
+    background-color: #3B6E6E; 
+    color: #FFFFFF; 
+}
+
+
+.chackbtn {
+    font-size: 1.875rem;
+    color: white;
+    float: right;
+    line-height: 5rem;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+
+
+/* Media queries for responsiveness */
+@media (max-width: 952px) {
+    nav ul li a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 858px) {
+    .chackbtn {
+        display: block;
+        margin-right: 30px;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #2F4F4F;
+        color: #D3D3D3;
+        left: -100%;
+        top: 0;
+        transition: all .5s;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 20px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 1.25rem; 
+        color: #D3D3D3;
+    }
+
+    a:hover, a.active {
+        background-color: #3B6E6E;
+        color: #FFFFFF; /
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+    footer h1{
+        font-size: 0.8rem;
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 410px) {
+    .logo {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 355px) {
+    .logo {
+        font-size: 1.125rem; 
+    }
+}
+
+footer{
+    height: 50px;
+    width: 100%;
+    font-size: 0.8rem;
+    text-align: center;
+    padding-top: 10px; 
+    background-color: #2F4F4F;
+    color: #D3D3D3;
+}

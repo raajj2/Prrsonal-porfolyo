@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/CSS/headerandfooter.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Raj's Portfolio</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .intro-text h1 {
+            animation: fadeIn 1s ease-out;
+        }
+
+        .intro-img img {
+            animation: zoomIn 1s ease-out;
+        }
+
+        #aboutme .about-container {
+            animation: slideUp 1s ease-out;
+        }
+
+        #skills .skill {
+            animation: slideUp 1s ease-out;
+        }
+
+        #projects .project-card {
+            animation: fadeIn 1s ease-out;
+        }
+
+        #contact form {
+            animation: slideUp 1s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="chackbtn">
+                <i class="fas fa-bars" style="color: rgb(0, 0, 0);"></i>
+            </label>
+            <h1 class="logo">Raj Bharadva</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#aboutme">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <button class="nav-btn poppins-14px" id="cv-btn"> <a href="Assets/RAJ CV.pdf" download>Download CV</a></button>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="container">
+        <div class="intro">
+            <div class="intro-text animate__animated animate__fadeIn">
+                <h1>Hi, I am Raj Bharadva</h1>
+                <p class="fp">IT Diploma Student</p>
+                <p class="fp2">Passionate about Web Development, Web Design.</p>
+                <a href="#aboutme" class="cta-btn">Learn More</a>
+                <a href="#contact" class="contact-btn">Contact</a>
+            </div>
+            <div class="intro-img animate__animated animate__zoomIn">
+                <img src="Assets/image/img1.png" alt="Raj Bharadva">
+            </div>
+        </div>
+    </section>
+
+    <section id="aboutme" class="container animate__animated animate__fadeIn">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="/Assets/image/img2.png" alt="Raj Bharadva">
+            </div>
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>Hi, I’m Raj Bharadva, a passionate web developer with a knack for creating responsive and engaging websites. I’m currently pursuing an IT diploma, where I’ve honed my skills in HTML, CSS, JavaScript, and Bootstrap.</p>
+                <p>My journey in web development began during my studies, and I’ve since completed a successful internship where I designed an e-commerce website. Now, I’m constantly looking for new challenges and opportunities to learn more about front-end development and user experience design.</p>
+                <h3>Interests</h3>
+                <p>Outside of coding, I enjoy playing cricket, exploring UI/UX design, and spending time with friends and family. I’m also an avid cook and love experimenting with new recipes!</p>
+                <h3>Education</h3>
+                <p>Currently pursuing an IT diploma at Government Polytechnic Rajkot, with a focus on web development and software engineering.</p>
+                <button class="cta-button" onclick="location.href='#projects'">View My Work</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="container animate__animated animate__fadeIn">
+        <h2>My Skills</h2>
+        <p>Here are some of the key skills I've developed throughout my journey in web development. The progress bars below reflect my current proficiency in each area. I am continuously improving and expanding my skills to stay updated with the latest technologies and trends.</p>
+        <div class="skills-wrapper">
+            <div class="skill">
+                <label>HTML5</label>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 0%;" data-progress="85"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <label>CSS3</label>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 0%;" data-progress="80"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <label>JavaScript</label>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 0%;" data-progress="50"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <label>Tailwind CSS</label>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 0%;" data-progress="20"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <label>Bootstrap</label>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 0%;" data-progress="4"></div>
+                </div>
+            </div>
+        </div>
+        <button onclick="loadSkills()">Show My Skills</button>
+    </section>
+
+    <section id="projects" class="container animate__animated animate__fadeIn">
+        <h2>My Projects</h2>
+        <p>Explore some of the projects I've worked on, showcasing my skills and creativity in web development.</p>
+        <div class="projects-wrapper">
+            <div class="project-card">
+                <img src="/Assets/image/Amazon-clone.png" alt="Project 1">
+                <h3>Amazon-Clone</h3>
+                <a href="https://github.com/raajj2/Amazon-Clone/tree/main/Amazon-Clone" target="_blank" class="btn">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <img src="/Assets/image/E-comarce01.png" alt="Project 2">
+                <h3>E-commerce</h3>
+                <a href="https://github.com/raajj2/E-commerce-01/tree/main/E-Commerce" target="_blank" class="btn">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <img src="/Assets/image/Netflix-clone.png" alt="Project 3">
+                <h3>Netflix-clone</h3>
+                <a href="https://github.com/raajj2/Netflix-clone/tree/main/Netflix" target="_blank" class="btn">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <img src="/Assets/image/Indian-Restarunt.png" alt="Project 3">
+                <h3>Indian Restaurant</h3>
+                <a href="https://github.com/raajj2/Landing-Page-for-a-Restaurant/tree/main/Landing%20Page%20for%20a%20Restaurant" target="_blank" class="btn">View on GitHub</a>
+            </div>
+            
+            <!-- Repeat .project-card for more projects -->
+        </div>
+    </section>
+
+    <section id="contact" class="container animate__animated animate__fadeIn">
+        <div class="contact-content">
+            <h2>Contact Me</h2>
+            <form id="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone (optional):</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="social-media">
+                <h3>Connect with Me</h3>
+                <a href="https://www.linkedin.com/in/raj-bharadva-251a84321/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:bharadvaraj83@example.com" target="_blank" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://github.com/raajj2" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h1>© 2024 Raj Bharadva All Rights Reserved</h1>
+    </footer>
+
+    <button id="scrollToTopBtn" class="scrollToTopBtn"><i class="fa-solid fa-arrow-up-long" style="color: #D3D3D3;"></i></button>
+
+    <script src="/JS/script.js"></script>
+</body>
+</html>
